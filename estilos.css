@@ -1,0 +1,132 @@
+/* Estilos generales */
+*{margin: 0; padding: 0;}
+body{
+    font-family: 'lato', serif;
+}
+header{
+    background-color: rgb(41, 41, 208);
+    background-image: linear-gradient(315deg,
+    rgb(6, 6, 147) 0%, rgb(77, 5, 24) 74%);
+    padding: 30px;
+    color: aliceblue;
+}
+main{
+    margin: 50px 75px;
+}
+hr{
+    margin: 40px 0;
+}
+div{
+    background-color: gray;
+    width: 200px;
+    height: 200px;
+}
+img{
+    width: 100%;
+}
+
+
+
+
+/* Degradados */
+
+.degradado{
+    background-image: linear-gradient(300deg,
+    blue 20%, violet 80%);
+    
+}
+.degradadoDos{
+    background-image: radial-gradient(rgb(204, 62, 86) 70%,
+     yellow);
+}
+/* Transformaciones */
+.mover{
+    transform: translate(400px);/* X, Y */
+}
+.girar{
+    transform: rotate(45deg);
+    margin: 50px;
+}
+.escalar{
+    transform: scale(1.55,0.5);
+    margin-left: 75px;
+}
+.sesgar{
+    transform: skew(20deg,10deg);
+    margin: 50px;
+}
+/* Transiciones */
+.trans {
+    transition: width 1s, height 2s;/* propiedad y duracion */
+}
+.trans:hover{
+    width: 100%;
+    height: 500px;
+    border: solid 10px rgb(210, 16, 210);
+    background-image: url(https://th.bing.com/th/id/R.4d60f8a0fc9295cdf48e3303cf3f3f7c?rik=tw%2f2ZZOZzaxB2Q&pid=ImgRaw&r=0)
+}
+/* Animacion */
+.anima{
+
+    animation-name: efectito;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 0;
+}
+.texto{
+
+    animation-name: efectito;
+    animation-duration: 5s;
+}
+
+/* Keyframes= Linea de tiempo */
+@keyframes efectito{
+    0%/* inicio */{
+    /* estilos */
+    transform: translateX(0);
+    border-radius: 50%;
+    }
+
+    50%{
+    /* estilos */
+        transform: translateX(700px);
+        background-color: #f7b42c;
+        background-image: linear-gradient(315deg, #f7b42c 0%, 
+        #fc575e 74%);
+        border-radius: 20%;
+    }
+
+    70%/* Final */{
+        /* estilos */
+        transform: translateX(0);
+        background-color: #f7b42c;
+        background-image: linear-gradient(315deg, #f7b42c 0%,
+        #fc575e 74%);
+        }
+    
+
+    100%/* Final */{
+    /* estilos */
+        transform: translateX(0);
+        background-color: #f7b42c;
+        background-image: linear-gradient(315deg, #f7b42c 0%,
+        #fc575e 74%);
+        border-radius: 50%;
+    }
+}
+    
+    @keyframes texto {
+
+        from/* inicio */ {
+            opacity: 0;
+            transform: translate(300px);
+        }
+       
+        to/* final */ {
+            opacity: 1;
+            transform: translate(0px);
+        }
+}
+
+
+
